@@ -36,7 +36,7 @@
 
   <div class="example">
     <div class="example-inputs">
-      <datetime type="datetime" v-model="datetime"></datetime>
+      <datetime type="datetime" v-model="datetimeEmpty" :min-datetime="minDatetime" :max-datetime="maxDatetime"></datetime>
 
       <div class="values">
         <p>
@@ -63,6 +63,21 @@
     </div>
     <div class="example-code">
       <pre><code>&#x3C;datetime type=&#x22;datetime&#x22; v-model=&#x22;datetime12&#x22; use12-hour&#x3E;&#x3C;/datetime&#x3E;</code></pre>
+    </div>
+  </div>
+
+  <h2>Time</h2>
+  <div class="example">
+    <div class="example-inputs">
+      <datetime type="time" v-model="time"></datetime>
+      <div class="values">
+        <p>
+          <strong>Value:</strong> {{ time }}
+        </p>
+      </div>
+    </div>
+    <div class="example-code">
+      <pre><code>&#x3C;datetime v-model=&#x22;time&#x22;&#x3E;&#x3C;/datetime&#x3E;</code></pre>
     </div>
   </div>
 
@@ -159,22 +174,6 @@
 }</code></pre>
     </div>
   </div>
-
-  <h2>Time</h2>
-  <div class="example">
-    <div class="example-inputs">
-      <datetime type="time" v-model="time"></datetime>
-      <div class="values">
-        <p>
-          <strong>Value:</strong> {{ time }}
-        </p>
-      </div>
-    </div>
-    <div class="example-code">
-      <pre><code>&#x3C;datetime v-model=&#x22;time&#x22;&#x3E;&#x3C;/datetime&#x3E;</code></pre>
-    </div>
-  </div>
-
 
   <footer>
     © <a href="https://github.com/mariomka">Mario Juárez</a> -
